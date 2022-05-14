@@ -2,6 +2,7 @@
 **/node_modules
 
 # Not written by hand
+packages
 packages/react-art/npm/lib
 
 # Build products

@@ -315,10 +315,15 @@ module.exports = function (webpackEnv) {
         'react-native': 'react-native-web',
         // Allows for better profiling with ReactDevTools
         ...(isEnvProductionProfile && {
-          'react-dom$': 'react-dom/profiling',
+          // 'react-dom$': 'react-dom/profiling',
           'scheduler/tracing': 'scheduler/tracing-profiling',
         }),
         ...(modules.webpackAliases || {}),
+
+        'react': path.resolve(__dirname, '../src/react-18.1.0/packages/react'),
+        'react-dom': path.resolve(__dirname, '../src/react-18.1.0/packages/react-dom'),
+        'shared': path.resolve(__dirname, '../src/react-18.1.0/packages/shared'),
+        'react-reconciler': path.resolve(__dirname, '../src/react-18.1.0/packages/react-reconciler'),
       },
       plugins: [
         // Prevents users from importing files from outside of src/ (or node_modules/).

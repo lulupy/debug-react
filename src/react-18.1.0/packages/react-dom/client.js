@@ -54,3 +54,8 @@ export function hydrateRoot(
     }
   }
 }
+
+export default {
+  createRoot,
+  hydrateRoot,
+}

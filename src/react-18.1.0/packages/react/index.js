@@ -81,3 +81,5 @@ export {
   useTransition,
   version,
 } from './src/React';
+
+export * as default from './src/React';
