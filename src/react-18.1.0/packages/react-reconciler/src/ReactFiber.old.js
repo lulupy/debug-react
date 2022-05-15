@@ -119,6 +119,8 @@ if (__DEV__) {
   }
 }
 
+let _debugID = 0;
+
 function FiberNode(
   tag: WorkTag,
   pendingProps: mixed,
@@ -192,6 +194,8 @@ function FiberNode(
     this._debugOwner = null;
     this._debugNeedsRemount = false;
     this._debugHookTypes = null;
+    // 我加的
+    this._debugID = `${_debugID++}`;
     if (!hasBadMapPolyfill && typeof Object.preventExtensions === 'function') {
       Object.preventExtensions(this);
     }
